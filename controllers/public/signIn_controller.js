@@ -1,6 +1,6 @@
 import { User } from "../../models/userModel.js";
 import { mailerFunc } from "../../util/mailerFunc.js";
-import { decryptPwdFunc } from "../../util/passwordHelperFunc.js";
+import { decryptPwdFunc } from "../../util/PasswordHelperFunc.js";
 import { signTokenFunc } from "../../util/tokenFunc.js";
 export const signinHandler = async (req, res) => {
   const { email, password } = req.body;
