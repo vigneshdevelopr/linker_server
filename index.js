@@ -17,9 +17,10 @@ app.get('/',(req,res)=>{
 })
 
 connectDB()
-  .then(() =>
+
+
+
     app.listen(process.env.PORT, () => {
       console.log(`Your Server is Connected Successfully on ${process.env.PORT}`);
     })
-  )
-  .catch((e) => console.log(e, " err-index.js"));
+  
