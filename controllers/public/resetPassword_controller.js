@@ -1,6 +1,6 @@
 import { User } from "../../models/userModel.js";
 import { mailerFunc } from "../../util/mailerFunc.js";
-import { encryptPwdFunc } from "../../util/PasswordHelperFunc.js";
+import { encryptPwdFunc } from "../../util/passwordHelperFunc.js";
 import { verifyTokenFunc } from "../../util/tokenFunc.js";
 
 export const resetPasswordHandler = async (req, res) => {
