@@ -34,7 +34,7 @@ export const signupHandler = async (req, res) => {
       toAddress: createdUser.email,
       mailSubject: "Account Activation Link",
       mailContent: `Welcome ${createdUser.name}!, just click the following link to activate your Account  -   
-        http://localhost:5000/${token}`,
+        ${process.env.CLIENT_URL_ACCOUNTACTIVATION}/${token}`,
     };
     await mailerFunc(mailDetails);
 

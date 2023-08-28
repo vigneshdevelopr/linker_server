@@ -38,7 +38,7 @@ export const signinHandler = async (req, res) => {
         mailSubject:
           "Account Activation Link-(required for creating shortUrls)",
         mailContent: `Welcome ${userAvailable.name}!, just click the following link to activate your Account and start creating ShortUrls  -   
-      http://localhost:5000/${token}`,
+      ${process.env.CLIENT_URL_ACCOUNTACTIVATION}/${token}`,
       };
       await mailerFunc(mailDetails);
     }

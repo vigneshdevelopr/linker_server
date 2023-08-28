@@ -10,10 +10,7 @@ export const analysisUrlHandler = async (req, res) => {
         .send({ msg: "Only authorized users allowed", type: "error" });
     }
     const allUrls = await SuperUrlz.find({ user: id });
-    // const arr = await allUrls.map((d) => {
-    //   return d.createdAt.toISOString();
-    // });
-    // console.log(arr, " arr");
+    
 
     const dataArray = await allUrls.map((doc) => {
       const createdDateFn = doc.createdAt.toISOString().split("T")[0];
