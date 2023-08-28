@@ -1,13 +1,13 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   
-   "start":"nodemon index.js"
+    "start": "nodemon index.js",
+    "build": "webpack --config webpack.config.js"
+
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,8 @@
     "nodemailer": "^6.9.4",
     "uuid": "^9.0.0",
     "valid-url": "^1.0.9"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }
