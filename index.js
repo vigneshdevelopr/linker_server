@@ -7,6 +7,7 @@ import { urlPrivate_route } from "./routes/urlPrivate_route.js";
 import { connectDB } from "./db/db_connection.js";
 const app = express();
 dotenv.config();
+const port = process.env.PORT
 app.use(cors());
 app.use(express.json());
 app.use("/", redirectUrl);
@@ -20,7 +21,7 @@ connectDB()
 
 
 
-    app.listen(process.env.PORT, () => {
-      console.log(`Your Server is Connected Successfully on ${process.env.PORT}`);
+app.listen(port, () => {
+      console.log(`Your Server is Connected Successfully on ${port}`);
     })
   
